@@ -1,3 +1,5 @@
+import { quitePopup, enableValidation, quiteEsc } from "/scripts/validate.js";
+
 const initialCards = [
   {
     name: "Valle de Yosemite",
@@ -62,6 +64,7 @@ function closeModal(modal) {
   modal.classList.remove("popup_is-opened");
 }
 
+
 function fillProfileForm() {
   inputName.value = profileTitle.textContent;
   inputDescription.value = profileDescription.textContent;
@@ -117,9 +120,7 @@ function getCardElement({name = "Sin título" , link = "./images/placeholder.jpg
     openModal(userPopup);
   });
 
-  popupClose.addEventListener("click", () => {
-    closeModal(userPopup);
-  });
+  
 
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle("card__like-button_is-active");
@@ -165,5 +166,17 @@ cerrarNuevaTarjeta.addEventListener("click", () =>{
   closeModal(popup_Open_Close);
 });
 
+popupClose.addEventListener("click", () => {
+    closeModal(userPopup);
+  });
+
 cardFormElement.addEventListener("submit", handleCardFormSubmit);
+
+
+quitePopup(closeModal);
+enableValidation();
+quiteEsc (closeModal);
+
+
+  
 

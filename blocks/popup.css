@@ -117,6 +117,30 @@
   margin: 0;
 }
 
+.popup__error{
+  display: none;
+}
+
+.popup__error_visible{
+  display: block;
+  color: #FF0000;
+}
+
+.popup__input_type_error{
+  border-color: #FF0000;
+}
+
+.popup__button_disabled{
+  cursor: not-allowed;
+  background-color: #FFFFFF;
+  color: #CCCCCC;
+}
+
+.popup__field{
+  position: relative;
+}
+
+
 @media screen and (max-width: 544px) {
   .popup {
     bottom: 112px;
